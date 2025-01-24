@@ -1,0 +1,7 @@
+default: -p pretty -p ci -p hk -p allure
+
+prod: ENVIRONMENT_TYPE=prod
+hk: ENVIRONMENT_TYPE=hk
+pretty: --format pretty
+ci: --format progress
+allure: --format AllureCucumber::CucumberFormatter --out allure-results
